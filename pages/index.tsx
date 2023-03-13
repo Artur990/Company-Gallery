@@ -1,11 +1,9 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Slider from "@/components/Slider";
 import About from "@/components/About";
-import Gallery from "@/components/Gallery";
 import Food from "@/components/Food";
-const inter = Inter({ subsets: ["latin"] });
+import ImagesList from "@/components/ImageList";
 
 export default function Home() {
   return (
@@ -16,16 +14,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <img src="19021593.jpg" alt="sd" className="w-full h-full fixed z-[-1]" />
-      <div className="">
-        <div className="relative">
-          <Navbar />
-          <Slider />
-        </div>
-        <div className="relative">
-          <About />
-          <Gallery />
-        </div>
+      <img src="19021593.jpg" alt="sd" className="fixed z-[-1] h-full w-full" />
+      <div className="relative">
+        <Navbar />
+        <Slider />
+        <About />
+        <ImagesList />
+        <Food />
       </div>
     </>
   );

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 const Navbar = () => {
   const handleClickScrollImageList = () => {
@@ -16,10 +17,12 @@ const Navbar = () => {
   return (
     <div className=" relative">
       <div className="absolut z-1 inset-0 flex h-[100px] w-full  justify-between  bg-transparent px-0 py-5">
-        <img
+        <Image
+          width={208}
+          height={90}
           src="/logo-black-1.jpg"
           alt="logo"
-          className="w-50 h-20  rounded-2xl hover:bg-slate-400 "
+          className="h-20 w-52  rounded-2xl hover:bg-slate-400 "
         />
 
         <div className="  hidden min-w-[10%] justify-between sm:flex ">

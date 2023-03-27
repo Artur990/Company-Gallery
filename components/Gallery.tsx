@@ -9,7 +9,9 @@ const Gallery = () => {
       <div className="m-10 grid grid-cols-1 gap-1 p-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
         {[...Array(13)].map((e, i) => {
           return (
-            <img
+            <Image
+              width={200}
+              height={200}
               key={id}
               src="/nag3.JPG"
               alt="nagrobki"

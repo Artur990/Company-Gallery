@@ -1,7 +1,6 @@
 import * as React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-import { SRLWrapper } from "simple-react-lightbox";
 import Image from "next/image";
 
 function srcset(image: any, size: any, rows = 1, cols = 1) {
@@ -15,7 +14,8 @@ function srcset(image: any, size: any, rows = 1, cols = 1) {
 
 export default function ImagesList() {
   return (
-    <SRLWrapper>
+    <div>
+      <p className="mb-10 text-center text-3xl font-semibold">Nasze prace</p>
       <ImageList
         id="imageList"
         variant="quilted"
@@ -43,7 +43,9 @@ export default function ImagesList() {
               "&:hover": { opacity: 1 },
             }}
           >
-            <img
+            <Image
+              height={400}
+              width={400}
               {...srcset(
                 item.img,
                 200,
@@ -60,7 +62,7 @@ export default function ImagesList() {
           </ImageListItem>
         ))}
       </ImageList>
-    </SRLWrapper>
+    </div>
   );
 }
 

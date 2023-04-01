@@ -43,9 +43,7 @@ export default function ImagesList() {
               "&:hover": { opacity: 1 },
             }}
           >
-            <Image
-              height={400}
-              width={400}
+            <img
               {...srcset(
                 item.img,
                 200,

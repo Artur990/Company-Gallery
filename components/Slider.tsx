@@ -34,11 +34,11 @@ const Slider = () => {
             ].map((image, i) => {
               return (
                 <motion.div key={i} className="min-h-[40rem] w-[60%] p-[0px]">
-                  <Image
+                  <img
                     src={image}
                     alt="img"
-                    width={284}
-                    height={380}
+                    // width={440}
+                    // height={380}
                     className="  pointer-events-none  m-5 h-full  w-[50%] min-w-[220px] rounded-3xl sm:min-w-[400px] "
                   />
                 </motion.div>

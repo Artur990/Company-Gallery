@@ -39,9 +39,7 @@ const About = () => {
 
       <section className=" my-10 align-middle sm:flex sm:justify-center">
         <div className="h=[100%] sm:h=[40%] my-10 w-[100%] bg-transparent sm:w-[25%]">
-          <Image
-            width={300}
-            height={500}
+          <img
             src="/nag1.jpg"
             alt="nagrobki"
             className="h=[60%] my-3 w-[100%] rounded-md  bg-transparent hover:opacity-80   sm:w-[90%]"
@@ -55,9 +53,7 @@ const About = () => {
           </p>
         </div>
         <div className="h=[100%] sm:h=[40%] my-10 w-[100%] sm:w-[25%] ">
-          <Image
-            width={300}
-            height={500}
+          <img
             src="/schody2.jpg"
             alt="nagrobki"
             className="h=[60%] my-3 w-[100%] rounded-md hover:opacity-80  sm:w-[90%]"
@@ -71,9 +67,7 @@ const About = () => {
           </p>
         </div>
         <div className="h=[100%] sm:h=[40%] my-10 w-[100%] sm:w-[25%] ">
-          <Image
-            width={300}
-            height={500}
+          <img
             src="/parapet1.jpg"
             alt="nagrobki"
             className="h=[60%] my-3 w-[100%] rounded-md hover:opacity-80  sm:w-[90%]"

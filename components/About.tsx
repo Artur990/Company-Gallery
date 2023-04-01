@@ -58,7 +58,7 @@ const About = () => {
           <Image
             width={300}
             height={500}
-            src="/nag1.jpg"
+            src="/schody2.jpg"
             alt="nagrobki"
             className="h=[60%] my-3 w-[100%] rounded-md hover:opacity-80  sm:w-[90%]"
           />
@@ -74,7 +74,7 @@ const About = () => {
           <Image
             width={300}
             height={500}
-            src="/nag1.jpg"
+            src="/parapet1.jpg"
             alt="nagrobki"
             className="h=[60%] my-3 w-[100%] rounded-md hover:opacity-80  sm:w-[90%]"
           />

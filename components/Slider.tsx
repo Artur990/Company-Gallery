@@ -28,9 +28,9 @@ const Slider = () => {
             {[
               "/nag1.jpg",
               "/nag2.jpg",
-              "/nag2.jpg",
-              "/nag2.jpg",
-              "/nag2.jpg",
+              "/nag4.jpg",
+              "/nag5.jpg",
+              "/nag4.jpg",
             ].map((image, i) => {
               return (
                 <motion.div key={i} className="min-h-[40rem] w-[60%] p-[0px]">

@@ -43,9 +43,7 @@ export default function ImagesList() {
               "&:hover": { opacity: 1 },
             }}
           >
-            <Image
-              width={200}
-              height={200}
+            <img
               {...srcset(
                 item.img,
                 200,
@@ -72,7 +70,15 @@ const itemData = [
     title: "nagrobki",
   },
   {
-    img: "/nag3.JPG",
+    img: "/nag5.JPG",
+    title: "nagrobki",
+  },
+  {
+    img: "/nag6.JPG",
+    title: "nagrobki",
+  },
+  {
+    img: "/schody2.jpg",
     title: "nagrobki",
   },
   {
@@ -84,35 +90,27 @@ const itemData = [
     title: "nagrobki",
   },
   {
-    img: "/nag3.JPG",
+    img: "/schody2.jpg",
     title: "nagrobki",
   },
   {
-    img: "/nag3.JPG",
+    img: "/parapet2.jpg",
     title: "nagrobki",
   },
   {
-    img: "/nag3.JPG",
+    img: "/parapet1.jpg",
     title: "nagrobki",
   },
   {
-    img: "/nag3.JPG",
+    img: "/nag4.JPG",
     title: "nagrobki",
   },
   {
-    img: "/nag3.JPG",
+    img: "/nag5.JPG",
     title: "nagrobki",
   },
   {
-    img: "/nag3.JPG",
-    title: "nagrobki",
-  },
-  {
-    img: "/nag3.JPG",
-    title: "nagrobki",
-  },
-  {
-    img: "/nag3.JPG",
+    img: "/nag6.JPG",
     title: "nagrobki",
   },
 ];

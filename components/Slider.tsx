@@ -31,11 +31,11 @@ const Slider = () => {
             className="flex bg-transparent"
           >
             {[
-              "/nag1.jpg",
-              "/nag2.jpg",
+              "/nag1.JPG",
+              "/nag2.JPG",
               "/nag6.JPG",
-              "/nag5.jpg",
-              "/nag4.jpg",
+              "/nag5.JPG",
+              "/nag4.JPG",
             ].map((image, i) => {
               return (
                 <motion.div key={i} className="min-h-[30rem] w-[100%] p-[0px]">

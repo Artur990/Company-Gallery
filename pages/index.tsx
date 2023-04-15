@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Slider from "@/components/Slider";
 import About from "@/components/About";
 import Food from "@/components/Food";
-import ImagesList from "@/components/ImageList";
+import Gallery from "@/components/Gallery";
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
         <Navbar />
         <Slider />
         <About />
-        <ImagesList />
+        <Gallery />
         <Food />
       </div>
     </>

@@ -1,25 +1,54 @@
-import Image from "next/image";
-import React, { useId } from "react";
+import React from "react";
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
+
+const images = [
+  {
+    original: "/nag3.JPG",
+    thumbnail: "/nag3.JPG",
+    description: " 1",
+  },
+  {
+    original: "/nag5.JPG",
+    thumbnail: "/nag5.JPG",
+    description: "Opis obrazu 2",
+  },
+  {
+    original: "/nag6.JPG",
+    thumbnail: "/nag6.JPG",
+    description: "Opis obrazu 3",
+  },
+  {
+    original: "/parapet1.jpg",
+    thumbnail: "/parapet1.jpg",
+    description: "Opis obrazu 3",
+  },
+  {
+    original: "/nag6.JPG",
+    thumbnail: "/nag6.JPG",
+    description: "Opis obrazu 3",
+  },
+  {
+    original: "/parapet2.jpg",
+    thumbnail: "/parapet2.jpg",
+    description: "Opis obrazu 3",
+  },
+  {
+    original: "/nag6.JPG",
+    thumbnail: "/nag6.JPG",
+    description: "Opis obrazu 3",
+  },
+  {
+    original: "/nag5.JPG",
+    thumbnail: "/nag5.JPG",
+    description: "Opis obrazu 3",
+  },
+];
 
 const Gallery = () => {
-  const id = useId();
   return (
-    <div className=" h-[50vh]  ">
-      <p className="mb-5 text-center text-3xl font-semibold">Galeria</p>
-      <div className="m-10 grid grid-cols-1 gap-1 p-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
-        {[...Array(13)].map((e, i) => {
-          return (
-            <Image
-              width={200}
-              height={200}
-              key={id}
-              src="/nag3.JPG"
-              alt="nagrobki"
-              className="h-[50vh] w-[60vh] cursor-grab rounded-sm sm:w-[50vh]"
-            />
-          );
-        })}
-      </div>
+    <div id="gallery" className="mx-auto max-w-screen-xl">
+      <ImageGallery items={images} />
     </div>
   );
 };

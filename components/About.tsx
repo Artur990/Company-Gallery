@@ -4,7 +4,10 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className={`${styles.paddings} relative h-[100%] bg-slate-50`}>
+    <div
+      id="about"
+      className={`${styles.paddings} relative h-[100%] bg-slate-50`}
+    >
       <section className="mt-10">
         <p className="mb-10 text-center text-3xl font-semibold">
           Zakład kamieniarki - Andrzej Grzębski{" "}
@@ -37,12 +40,12 @@ const About = () => {
         </li>
       </ul>
 
-      <section className=" my-10 align-middle sm:flex sm:justify-center">
-        <div className="h=[100%] sm:h=[40%] my-10 w-[100%] bg-transparent sm:w-[25%]">
+      <section className=" my-10 w-[100%] align-middle sm:flex sm:justify-center">
+        <div className="sm:h=[40%] m-auto my-10 h-[100%] w-[100%] bg-transparent sm:w-[25%]">
           <img
             src="/nag1.jpg"
             alt="nagrobki"
-            className="h=[60%] my-3 w-[100%] rounded-md  bg-transparent hover:opacity-80   sm:w-[90%]"
+            className="my-3 h-[300px] w-[100%] rounded-md  bg-transparent hover:opacity-80   sm:w-[90%]"
           />
 
           <p className="text-center text-xl font-bold sm:text-left">Nagrobki</p>
@@ -52,11 +55,11 @@ const About = () => {
             królują granit oraz marmur.
           </p>
         </div>
-        <div className="h=[100%] sm:h=[40%] my-10 w-[100%] sm:w-[25%] ">
+        <div className="sm:h=[40%] m-auto my-10 h-[100%] w-[100%] sm:w-[25%] ">
           <img
             src="/schody2.jpg"
             alt="nagrobki"
-            className="h=[60%] my-3 w-[100%] rounded-md hover:opacity-80  sm:w-[90%]"
+            className="my-3 h-[300px] w-[60%] rounded-md hover:opacity-80  sm:w-[90%]"
           />
           <p className="text-center text-xl font-bold sm:text-left">Schody</p>
           <p className="text-center  font-medium sm:text-left">
@@ -66,11 +69,11 @@ const About = () => {
             się prezentują.
           </p>
         </div>
-        <div className="h=[100%] sm:h=[40%] my-10 w-[100%] sm:w-[25%] ">
+        <div className="sm:h=[40%] m-auto my-10 h-[100%] w-[100%] sm:w-[25%] ">
           <img
             src="/parapet1.jpg"
             alt="nagrobki"
-            className="h=[60%] my-3 w-[100%] rounded-md hover:opacity-80  sm:w-[90%]"
+            className="my-3 h-[300px] w-[100%] rounded-md hover:opacity-80  sm:w-[90%]"
           />
           <p className="text-center text-xl font-bold sm:text-left">
             Blaty kuchenne

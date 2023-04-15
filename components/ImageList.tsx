@@ -1,7 +1,6 @@
 import * as React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-import Image from "next/image";
 
 function srcset(image: any, size: any, rows = 1, cols = 1) {
   return {

@@ -16,7 +16,8 @@
     "next": "13.2.3",
     "react": "18.2.0",
     "react-18-image-lightbox": "^5.1.4",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-image-gallery": "^1.2.11"
   },
   "devDependencies": {
     "@emotion/react": "^11.10.6",
@@ -24,6 +25,7 @@
     "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.12",
     "@netlify/plugin-nextjs": "^4.32.2",
+    "@types/react-image-gallery": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "^5.57.0",
     "@typescript-eslint/parser": "^5.57.0",
     "autoprefixer": "^10.4.13",

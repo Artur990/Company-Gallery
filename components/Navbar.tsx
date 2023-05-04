@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -26,17 +27,45 @@ const Navbar = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+  const [scrolled, setScrolled] = useState(false);
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+
+    if (offset > 10) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  console.log(scrolled);
   return (
-    <nav className="relative flex flex-wrap items-center justify-between bg-transparent px-2 py-3">
-      <div className="container mx-auto flex flex-wrap items-center justify-between px-4">
+    <nav
+      className={`${
+        !scrolled ? "relative" : "fixed"
+      }  z-10 flex w-full flex-wrap items-center justify-between bg-transparent  px-2 py-3 ${
+        scrolled ? "fixed top-0 z-10 w-full  bg-white shadow-md" : ""
+      }`}
+    >
+      <div className="container mx-auto flex w-full flex-wrap items-center justify-between px-4">
         <div className="relative flex w-full justify-between lg:static lg:block lg:w-auto lg:justify-start">
           <a>
             <Image
               src="/logo-black-1.jpg"
               alt="Logo"
-              width={300}
-              height={50}
-              className="h-16 w-56"
+              width={scrolled ? 200 : 300}
+              height={scrolled ? 33 : 50}
+              className={`h-${scrolled ? 10 : 16} w-${
+                scrolled ? 40 : 56
+              } transition-all duration-500`}
             />
           </a>
           <button
@@ -56,28 +85,39 @@ const Navbar = () => {
         >
           <ul className="flex list-none flex-col lg:ml-auto lg:flex-row">
             <li className="nav-item">
-              <a
-                onClick={handleClickScrollGallery}
+              <Link
+                href="/about"
                 className="flex items-center px-3 py-2 text-xs font-bold uppercase leading-snug text-black hover:opacity-75"
               >
-                <span>Gallery</span>
-              </a>
+                <span>About</span>
+              </Link>
             </li>
             <li className="nav-item">
-              <a
-                onClick={handleClickScrollAbout}
+              <Link
+                href="/Faq"
                 className="flex items-center px-3 py-2 text-xs font-bold uppercase leading-snug text-black hover:opacity-75"
               >
-                <span>O Nas</span>
-              </a>
+                <span>FAQ</span>
+              </Link>
             </li>
             <li className="nav-item">
-              <a
-                onClick={handleClickScrollFood}
+              <Link
+                href="/contact"
                 className="flex items-center px-3 py-2 text-xs font-bold uppercase leading-snug text-black hover:opacity-75"
               >
-                <span>Kontakt</span>
+                <span>Contact</span>
+              </Link>
+            </li>
+            <li className="nav-item button_solid_color">
+              <a
+                href="/all-in-one-solution"
+                className="flex items-center px-3 py-2 text-xs font-bold uppercase leading-snug text-black hover:opacity-75"
+              >
+                <span>See it live</span>
               </a>
+            </li>
+            <li>
+              <ThemeToggle />
             </li>
           </ul>
         </div>
@@ -87,3 +127,53 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+// import { authOptions } from "@/lib/auth";
+// import { getServerSession } from "next-auth";
+// import Link from "next/link";
+// import { ThemeToggle } from "./ThemeToggle";
+// import { ThemeToggle } from "./ThemeToggle";
+// import { buttonVariants } from "./ui/Button";
+// import SignInButton from "./ui/SignInButton";
+// import SignOutButton from "./ui/SignOutButton";
+
+// const Navbar = async () => {
+// const session = await getServerSession(authOptions);
+
+//   return (
+//     <div className="fixed left-0 right-0 top-0 z-50 flex h-20 items-center justify-between border-b border-slate-300 bg-white/75 shadow-sm backdrop-blur-sm dark:border-slate-700 dark:bg-slate-900/75">
+//       <div className="container mx-auto flex w-full max-w-7xl items-center justify-between">
+//         {/* <Link href="/" className={buttonVariants({ variant: "link" })}> */}
+//         Text Similarity v1.0
+//         {/* </Link> */}
+//         <div className="md:hidden">
+//           <ThemeToggle />
+//         </div>
+//         <div className="hidden gap-4 md:flex">
+//           <ThemeToggle />
+//           <Link
+//             href="/documentation"
+//             // className={buttonVariants({ variant: "ghost" })}
+//           >
+//             Documentation
+//           </Link>
+//           {/* {session ? (
+//             <>
+//               <Link
+//                 className={buttonVariants({ variant: "ghost" })}
+//                 href="/dashboard"
+//               >
+//                 Dashboard
+//               </Link>
+//               <SignOutButton />
+//             </>
+//           ) : (
+//             <SignInButton />
+//           )} */}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Navbar;

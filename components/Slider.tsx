@@ -9,7 +9,7 @@ const Slider = () => {
   }, []);
 
   return (
-    <div className="relative m-0">
+    <div className="relative m-0 ">
       <p className="text-center text-2xl font-extrabold ">
         Darmowa wycena: kontakt:{" "}
         <span className="hidden text-center text-2xl font-extrabold text-red-400 sm:block ">
@@ -27,7 +27,7 @@ const Slider = () => {
         >
           <motion.div
             drag="x"
-            dragConstraints={{ right: 0, left: -width }}
+            dragConstraints={{ right: 0, left: width }}
             className="flex bg-transparent"
           >
             {[

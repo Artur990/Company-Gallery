@@ -16,11 +16,9 @@ export default function Home() {
       </Head>
       <img src="19021593.jpg" alt="sd" className="fixed z-[-1] h-full w-full" />
       <div className="relative">
-        <Navbar />
         <Slider />
         <About />
         <Gallery />
-        <Food />
       </div>
     </>
   );

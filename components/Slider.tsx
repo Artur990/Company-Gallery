@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { AiOutlineCheckCircle } from "react-icons/ai";
 const Slider = () => {
   // const [width, setWidth] = useState<any>();
   // const carousel = useRef() as any;
@@ -10,7 +11,7 @@ const Slider = () => {
 
   return (
     <div className="relative m-0 ">
-      <p className="text-center text-2xl font-extrabold ">
+      {/* <p className="text-center text-2xl font-extrabold ">
         Darmowa wycena: kontakt:{" "}
         <span className="hidden text-center text-2xl font-extrabold text-red-400 sm:block ">
           505-222-082
@@ -18,7 +19,7 @@ const Slider = () => {
       </p>
       <p className="text-center text-2xl font-extrabold text-red-400 sm:hidden ">
         505-222-082
-      </p>
+      </p> */}
       {/* <div className="absolut z-[0] m-0 mx-0 mt-5 w-full sm:mx-24 sm:w-3/4">
         <motion.div
           ref={carousel}
@@ -50,48 +51,85 @@ const Slider = () => {
           </motion.div>
         </motion.div>
       </div> */}
-      <div className="container mx-auto px-4">
-        <section className="flex flex-col md:flex-row md:space-x-8">
-          <div className="md:w-1/2">
-            <h1 className="mb-4 text-3xl font-bold">O nas</h1>
-            <p>
-              Jesteśmy firmą specjalizującą się w produkcji i montażu nagrobków
-              z marmuru wysokiej jakości. Posiadamy wieloletnie doświadczenie w
-              branży kamieniarskiej, dzięki czemu możemy zaoferować naszym
-              klientom profesjonalne usługi i trwałe, eleganckie nagrobki.
-            </p>
+      {/* <div
+        className="relative h-screen bg-cover bg-center"
+        style={{ backgroundImage: "url('/nag1.jpg')" }}
+      > */}
+      <div className="relative h-[600px] bg-black">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url(/nag1.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            opacity: 0.5,
+          }}
+        ></div>
+        <div className="container mx-auto flex h-full items-center justify-between px-4">
+          <div className="z-10 w-full text-white md:w-1/2">
+            {/* <div className="mb-4  rounded-md bg-zinc-800 p-5 opacity-90">
+              <h1 className="mb-4 text-4xl font-bold text-white">
+                Nagrobki Andrzej Grzębski
+              </h1>
+            </div> */}
+            <div className="mb-4  rounded-md bg-zinc-800 p-3 opacity-90">
+              <p className="text-center font-bold text-red-600">
+                Darmowa wycena!
+              </p>
+            </div>
+
+            <div className="mb-4 flex items-center rounded-xl bg-zinc-800 p-2 opacity-90">
+              <i className="h-8 w-8 text-green-500">
+                <AiOutlineCheckCircle className="h-8 w-8" />
+              </i>
+              <p>Długi okres na rynku!</p>
+            </div>
+            <div className="mb-4 flex items-center rounded-xl bg-zinc-800 p-2 opacity-90">
+              <i className="h-8 w-8 text-green-500">
+                <AiOutlineCheckCircle className="h-8 w-8" />
+              </i>
+              <p>Gwarancja konkretnej realizacji</p>
+            </div>
+            <div className="mb-4 flex items-center rounded-xl bg-zinc-800 p-2 opacity-90">
+              <i className="h-8 w-8 text-green-500">
+                <AiOutlineCheckCircle className="h-8 w-8" />
+              </i>
+              <p>Profesjonalne podejście oparte na 30-letnim doświadczeniu</p>
+            </div>
+            <div className="mb-4 flex items-center rounded-xl bg-zinc-800 p-2 opacity-90">
+              <i className="h-8 w-8 text-green-500">
+                <AiOutlineCheckCircle className="h-8 w-8" />
+              </i>
+              <p>Indywidualne podejście do każdego klienta</p>
+            </div>
+            <div className="mb-4 flex items-center rounded-xl bg-zinc-800 p-2 opacity-90">
+              <i className="h-8 w-8 text-green-500">
+                <AiOutlineCheckCircle className="h-8 w-8" />
+              </i>
+              <p>Doświadczenie oparte na 30-letniej pracy!</p>
+            </div>
           </div>
-          <div className="mt-4 grid grid-cols-2 gap-4 md:mt-0 md:w-1/2">
-            <Image
-              src="/nag1.JPG"
-              alt="Zdjęcie 1"
-              width={500}
-              height={500}
-              className="rounded-lg"
-            />
-            <Image
-              src="/nag2.JPG"
-              alt="Zdjęcie 2"
-              width={500}
-              height={500}
-              className="rounded-lg"
-            />
-            <Image
-              src="/nag3.JPG"
-              alt="Zdjęcie 3"
-              width={500}
-              height={500}
-              className="rounded-lg"
-            />
-            <Image
-              src="/nag5.JPG"
-              alt="Zdjęcie 4"
-              width={500}
-              height={500}
-              className="rounded-lg"
-            />
+          <div className="z-10 flex w-full flex-col items-center text-black md:w-1/2 md:items-start">
+            {/* <div className="mb-4 flex items-center rounded-xl bg-white p-2">
+              <i className="h-8 w-8 text-green-500">
+                <AiOutlineCheckCircle className="h-8 w-8" />
+              </i>
+              <p>Gwarancja konkretnej realizacji</p>
+            </div>
+            <div className="mb-4 flex items-center rounded-xl bg-zinc-800 p-2 opacity-90">
+              <i className="h-8 w-8 text-green-500">
+                <AiOutlineCheckCircle className="h-8 w-8" />
+              </i>
+              <p>Profesjonalne podejście oparte na 30-letnim doświadczeniu</p>
+            </div>
+            <div className="mb-4 flex items-center rounded-xl bg-white p-2">
+              <i className="h-8 w-8 text-green-500">
+                <AiOutlineCheckCircle className="h-8 w-8" />
+              </i>
+              <p>Indywidualne podejście do każdego klienta</p>
+            </div> */}
           </div>
-        </section>
+        </div>
       </div>
     </div>
   );

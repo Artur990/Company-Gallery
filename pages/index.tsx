@@ -4,6 +4,7 @@ import Slider from "@/components/Slider";
 import About from "@/components/About";
 import Food from "@/components/Food";
 import Gallery from "@/components/Gallery";
+import Faq from "@/components/Faq";
 
 export default function Home() {
   return (
@@ -14,12 +15,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <img src="19021593.jpg" alt="sd" className="fixed z-[-1] h-full w-full" />
-      <div className="relative">
+      {/* <img src="19021593.jpg" alt="sd" className="fixed z-[-1] h-full w-full" /> */}
+      <section className="relative">
         <Slider />
         <About />
         <Gallery />
-      </div>
+        <Faq />
+      </section>
     </>
   );
 }

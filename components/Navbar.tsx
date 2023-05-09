@@ -59,7 +59,7 @@ const Navbar = () => {
     <nav
       className={`${
         !scrolled ? "relative" : "fixed"
-      } z-20 flex w-full flex-wrap items-center justify-between bg-transparent px-2 py-3 ${
+      } flex-between z-20 w-full flex-wrap  bg-transparent px-2 py-3 ${
         scrolled ? "fixed top-0 z-10 w-full bg-white shadow-md" : ""
       }`}
     >
@@ -81,26 +81,26 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link
                   href="/kontakt"
-                  className="flex items-center px-3 py-2 text-xs font-bold uppercase leading-snug text-black hover:opacity-75"
+                  className="flex-center px-3 py-2 text-xs font-bold uppercase leading-snug text-black hover:opacity-75"
                 >
                   Kontakt
                 </Link>
               </li>
               <li
                 onClick={() => handleNavigation("pytania-i-odpowiedzi", "/")}
-                className="flex items-center px-3 py-2 text-xs font-bold uppercase leading-snug text-black hover:opacity-75"
+                className="flex-center px-3 py-2 text-xs font-bold uppercase leading-snug text-black hover:opacity-75"
               >
                 Pytania i odpowiedzi
               </li>
               <li
                 onClick={() => handleNavigation("gallery", "/")}
-                className="flex items-center px-3 py-2 text-xs font-bold uppercase leading-snug text-black hover:opacity-75"
+                className="flex-center px-3 py-2 text-xs font-bold uppercase leading-snug text-black hover:opacity-75"
               >
                 Galeria
               </li>
               <li
                 onClick={() => handleNavigation("about", "/")}
-                className="flex items-center px-3 py-2 text-xs font-bold uppercase leading-snug text-black hover:opacity-75"
+                className="flex-center px-3 py-2 text-xs font-bold uppercase leading-snug text-black hover:opacity-75"
               >
                 About
               </li>

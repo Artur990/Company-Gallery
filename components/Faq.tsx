@@ -10,10 +10,15 @@ const Faq = () => {
       setActiveQuestion(null);
     } else {
       setActiveQuestion(index);
-      questionRefs[index].current.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
+
+      if (questionRefs[index]) {
+        questionRefs[index].current.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      } else {
+        console.warn(`No ref found for index ${index}`);
+      }
     }
   };
 
@@ -43,7 +48,7 @@ const Faq = () => {
   return (
     <div
       id="pytania-i-odpowiedzi"
-      className="my-10 flex h-auto w-full flex-col  bg-white text-white dark:bg-gray-900"
+      className="flex h-auto w-full flex-col bg-white  py-24 text-white dark:bg-gray-900"
     >
       <div className="mx-auto w-full max-w-5xl bg-white px-5 py-5 pl-4 dark:bg-gray-900 sm:px-10">
         <h1 className="t mb-4 text-4xl font-bold">

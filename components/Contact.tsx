@@ -26,7 +26,7 @@ export default function Kontakt() {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: "url(/nag5.jpg)",
+              backgroundImage: "url(/nag5.JPG)",
               backgroundSize: "cover",
               backgroundPosition: "center",
               opacity: 0.5,

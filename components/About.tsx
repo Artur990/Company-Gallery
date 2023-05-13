@@ -57,7 +57,7 @@ const About = () => {
           <Image
             width={300}
             height={300}
-            src="/nag1.jpg"
+            src="/nag1.JPG"
             alt="nagrobki"
             className="my-3 h-[300px] w-[100%] rounded-md  bg-transparent hover:opacity-80   md:w-[90%]"
           />

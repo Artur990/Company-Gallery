@@ -127,20 +127,30 @@ const Navbar = () => {
                   </Link>
                 </div>
                 <div className="py-1">
-                  <Link
-                    href="/pytania-i-odpowiedzi"
+                  <div
+                    onClick={() =>
+                      handleNavigation("pytania-i-odpowiedzi", "/")
+                    }
                     className="text-md block px-4 py-2 text-white hover:bg-gray-100 hover:text-black"
                   >
                     Pytania i odpowiedzi
-                  </Link>
+                  </div>
                 </div>
                 <div className="py-1">
-                  <Link
-                    href="/galeria"
+                  <div
+                    onClick={() => handleNavigation("gallery", "/")}
                     className="text-md block px-4 py-2 text-white hover:bg-gray-100 hover:text-black"
                   >
                     galeria
-                  </Link>
+                  </div>
+                </div>
+                <div className="py-1">
+                  <div
+                    onClick={() => handleNavigation("about", "/")}
+                    className="text-md block px-4 py-2 text-white hover:bg-gray-100 hover:text-black"
+                  >
+                    About
+                  </div>
                 </div>
               </div>
             </li>

@@ -4,7 +4,6 @@ import Link from "next/link";
 import { slideIn, variants } from "@/utils/motion";
 
 import { BsArrowRightShort } from "react-icons/bs";
-import styles from "@/styles/index";
 
 const Header = () => {
   return (
@@ -78,7 +77,7 @@ const Header = () => {
                 </i>
                 <p>Gwarancja konkretnej realizacji</p>
               </div>
-              <div className="custom-divider"></div>
+              <div className="custom-divider" />
             </div>
           </motion.div>
         </div>

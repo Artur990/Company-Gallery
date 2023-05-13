@@ -24,7 +24,7 @@ const Faq = () => {
 
   const questions = [
     {
-      title: "Jak długo trzeba czekać na zamówiony pomnik?",
+      title: "Jak długo trzeba czekać na zamówiony nagrobek?",
       content:
         "To zależy czy pomnik jest składany z gotowych elementów, czy wykonany pod indywidualny projekt. W pierwszym przypadku czas oczekiwania wynosi około 2 tygodni, w drugim około 4 tygodni.",
     },
